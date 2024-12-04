@@ -16,7 +16,9 @@ public class Ejemplo011 {
      */
     public static void main(String[] args) {
         
+        
         for (int i = 10; i >= 0; i--) {
+                        System.out.printf("%d\n", i); //ya no aguanto ya no aguanto!!! 
             System.out.printf("%d\n", i);
         }
         
