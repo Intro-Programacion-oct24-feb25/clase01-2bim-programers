@@ -5,7 +5,7 @@
  */
 package paquete05;
 
-import paquete01.*;
+import java.util.Scanner;
 
 /**
  *
@@ -17,20 +17,26 @@ public class Ejemplo01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String cadenaFinal = "";
-        for (int i = 1; i <= 10; i++) {
-            
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
-        }
-        
-        for (int i = 1; i < 11; i++) {
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
-        }
-        
-        System.out.printf("%s", cadenaFinal);
 
+        Scanner entrada = new Scanner(System.in);
+        int tabla;
+        int numero;
+        int inicio = 1;
+        int contador = 1;
+        System.out.println("Ingresar el numero que desea generar la tabla");
+        numero = entrada.nextInt();
+        System.out.println("Ingresar el numero maximo a generar");
+        tabla = entrada.nextInt();
+
+        while (inicio <= numero) {
+            while (contador <= tabla) {
+                System.out.println(inicio + " *" + contador + "=" + inicio * contador);
+                contador= contador + 1;
+            }
+                 contador = 1;
+                 inicio = inicio +1;
+                 
+        }
     }
 
 }
